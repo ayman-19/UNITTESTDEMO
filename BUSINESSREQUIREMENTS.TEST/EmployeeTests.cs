@@ -62,5 +62,20 @@ namespace BUSINESSREQUIREMENTS.TEST
 
             Assert.Equal(expected, result);
         }
+
+        [Theory]
+        [InlineData(1, 2, 3)]
+        [InlineData(1, 2, 4)]
+        [InlineData(1, 3, 4)]
+        public void Add_ThreeNumbers_ReturnSum(int a, int b, int expected)
+        {
+            // act
+
+            var result = a + b;
+
+            // assert
+
+            Assert.Equal(expected, result);
+        }
     }
 }
